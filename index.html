@@ -659,13 +659,13 @@
   import { getDatabase, ref, set, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
   const firebaseConfig = {
-    apiKey: "AIzaSyDDNWr3yfuYx0VxXBHQC2wAEMNyy6V6-hc",
-    authDomain: "choco-diary-e11cc.firebaseapp.com",
-    databaseURL: "https://choco-diary-e11cc-default-rtdb.firebaseio.com", 
-    projectId: "choco-diary-e11cc",
-    storageBucket: "choco-diary-e11cc.firebasestorage.app",
-    messagingSenderId: "246292508096",
-    appId: "1:246292508096:web:b0aab0d45d96f771062c25"
+    apiKey: "AIzaSyBZURSySzY95sFnapBmcuBERhelLaCY1S8",
+    authDomain: "choco-diary-my.firebaseapp.com",
+    databaseURL: "https://choco-diary-my-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "choco-diary-my",
+    storageBucket: "choco-diary-my.firebasestorage.app",
+    messagingSenderId: "227159709988",
+    appId: "1:227159709988:web:0947a664961b51305e7bb1"
   };
 
   const app = initializeApp(firebaseConfig);
@@ -1467,14 +1467,14 @@ document.getElementById('next-m').onclick = ()=>{ vM++; if(vM>11){vM=0;vY++;} se
 renderCal(); renderDetail();
 
 // ── 알림 설정 ──
-const ALERT_SETTINGS_KEY = 'choco_alert_settings';
+const CHOCO_ALERT_SETTINGS_MY = 'choco_alert_settings';
 
 function loadSettings() {
-  try { return JSON.parse(localStorage.getItem(ALERT_SETTINGS_KEY)) || {}; }
+  try { return JSON.parse(localStorage.getItem(CHOCO_ALERT_SETTINGS_MY)) || {}; }
   catch(e) { return {}; }
 }
 function saveSettingsToStorage(obj) {
-  localStorage.setItem(ALERT_SETTINGS_KEY, JSON.stringify(obj));
+  localStorage.setItem(CHOCO_ALERT_SETTINGS_MY, JSON.stringify(obj));
 }
 
 window.openSettings = function() {
